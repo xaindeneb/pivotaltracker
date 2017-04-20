@@ -14,6 +14,11 @@ public class CreateAccountForm extends BasePage {
     @FindBy(id = "add_account_button")
     private WebElement createAccountButton;
 
+    /**
+     * Creates an account with the given name.
+     * @param accountName       the name of the account.
+     * @return the AccountHome page object of the created account.
+     */
     public AccountHome createAccount(final String accountName) {
         Actions.setTextField(accountNameTextField, accountName);
         Actions.clickElement(createAccountButton);

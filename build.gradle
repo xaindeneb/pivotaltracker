@@ -55,6 +55,8 @@ test {
     }
 
     systemProperty 'browser', browser
+    systemProperty 'username', username
+    systemProperty 'password', password
 
     scanForTestClasses false
 

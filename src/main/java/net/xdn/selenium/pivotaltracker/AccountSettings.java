@@ -10,10 +10,16 @@ public class AccountSettings extends BasePage {
     @FindBy(css = "form .description a[href*='accounts']")
     private WebElement deleteAccountLink;
 
+    /**
+     * Clicks the Delete account link.
+     */
     public void clickDeleteAccountLink() {
         Actions.clickElement(deleteAccountLink);
     }
 
+    /**
+     * Deletes the account.
+     */
     public void deleteAccount() {
         clickDeleteAccountLink();
         driver.switchTo().alert().accept();
